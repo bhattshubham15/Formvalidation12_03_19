@@ -13,7 +13,7 @@ export class NewcomponentComponent implements OnInit {
     profileForm = new FormGroup({
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl(''),
-      phoneno: new FormControl(''),
+      phoneno: new FormControl('', Validators.required),
       email: new FormControl('', Validators.email),
       address: new FormGroup({
         street: new FormControl(''),
