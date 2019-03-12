@@ -13,37 +13,34 @@
   
     <label>
       Mobile Number:
-      <input type="text" formControlName="mobileNumber" minlength="10" maxlength="10">
-        <!-- <div *ngIf  = "phoneno.hasError('required') ||  phoneno.hasError('minlength') ||  phoneno.hasError('maxlength')">
-    <p>10 digits required</p>
-    </div> -->
-    </label>
+      <input class = "box" type="text" formControlName="phoneno" minlength="10" maxlength="10" required>
+    </label>  
+    <div *ngIf = "f.phoneno.errors" class="alert alert-danger">
+        <p *ngIf  = "f.phoneno.errors.required">10 digits required</p>
+     </div>
 
-    <label>
+     <label>
         Email Address: 
-        <input class ="box" type="text" formControlName="email" placeholder="enter email">
+        <input class ="box" type="text" formControlName="email" placeholder="sample@123" required>
       </label>
-        <div *ngIf="f.email.errors" class="alert alert-danger">
-          <p *ngIf="f.email.errors.required">Email Required</p>
-          <p *ngIf="f.email.errors.email">Email must be valid</p>
+        <div *ngIf = "f.email.errors" class="alert alert-danger">
+          <p id="pemail2" *ngIf = "f.email.errors.email">Email must be valid</p>
         </div>
       
-  
-  
     <div formGroupName="address">
       <h3>Address</h3>
   
-      <label>
+      <label id="lbl1">
         Street:
         <input type="text" formControlName="street">
       </label>
   
-      <label>
+      <label id="lbl1">
         City:
         <input type="text" formControlName="city">
       </label>
       
-      <label>
+      <label id="lbl1">
         State:
         <input type="text" formControlName="state">
       </label>
@@ -55,14 +52,9 @@
     </div>
   
     <button id="submitbutton" type="submit" [disabled]="!profileForm.valid">Submit</button>
-  </form>
+</form>
   
   <hr>
-  
-  <p>
-    Form Value: {{ profileForm.value | json }}
-  </p>
-  
   <p>
     Form Status: {{ profileForm.status }}
   </p>
