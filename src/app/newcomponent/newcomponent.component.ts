@@ -24,13 +24,7 @@ export class NewcomponentComponent implements OnInit {
   });
 
   constructor() { }
-get f() { return this.profileForm.controls; }
-
-  onSubmit() {
-    console.warn(this.profileForm.value);
-    this.profileForm.patchValue({
-    });
-  }
+get fun() { return this.profileForm.controls; }
   ngOnInit() {
 
   }
