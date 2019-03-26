@@ -15,16 +15,16 @@
       Mobile Number:
       <input class = "box" type="text" formControlName="phoneno" minlength="10" maxlength="10" required>
     </label>  
-    <div *ngIf = "f.phoneno.errors" class="alert alert-danger">
-        <p *ngIf  = "f.phoneno.errors.required">10 digits required</p>
+    <div *ngIf = "fun.phoneno.errors" class="alert alert-danger">
+        <p *ngIf  = "fun.phoneno.errors.required">10 digits required</p>
      </div>
 
      <label>
         Email Address: 
         <input class ="box" type="text" formControlName="email" placeholder="sample@123" required>
       </label>
-        <div *ngIf = "f.email.errors" class="alert alert-danger">
-          <p id="pemail2" *ngIf = "f.email.errors.email">Email must be valid</p>
+        <div *ngIf = "fun.email.errors" class="alert alert-danger">
+          <p id="pemail2" *ngIf = "fun.email.errors.email">Email must be valid</p>
         </div>
       
     <div formGroupName="address">
